@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "trial-nextjs-npm-workspaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow npm"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.4"
+  },
+  "volta": {
+    "node": "20.12.1"
+  }
+}
