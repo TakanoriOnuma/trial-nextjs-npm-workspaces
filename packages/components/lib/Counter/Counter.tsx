@@ -1,4 +1,9 @@
 import { FC } from 'react';
+import { Stack, IconButton, Typography } from '@mui/material';
+import {
+  AddCircleOutline as AddCircleOutlineIcon,
+  RemoveCircleOutline as RemoveCircleOutlineIcon,
+} from '@mui/icons-material';
 
 export type CounterProps = {
   /** カウント */
@@ -12,22 +17,22 @@ export type CounterProps = {
 
 export const Counter: FC<CounterProps> = ({ count, onChangeCount }) => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <button
+    <Stack direction="row" alignItems="center" spacing={1}>
+      <IconButton
         onClick={() => {
           onChangeCount(count - 1);
         }}
       >
-        -
-      </button>
-      <span style={{ padding: '0 5px' }}>{count}</span>
-      <button
+        <RemoveCircleOutlineIcon />
+      </IconButton>
+      <Typography>{count}</Typography>
+      <IconButton
         onClick={() => {
           onChangeCount(count + 1);
         }}
       >
-        +
-      </button>
-    </div>
+        <AddCircleOutlineIcon />
+      </IconButton>
+    </Stack>
   );
 };

@@ -2,7 +2,11 @@ import { StorybookConfig } from '@storybook/nextjs';
 
 const storybookConfig: StorybookConfig = {
   stories: ['../lib/**/*.stories.@(ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-themes',
+  ],
   framework: {
     name: '@storybook/nextjs',
     options: {
