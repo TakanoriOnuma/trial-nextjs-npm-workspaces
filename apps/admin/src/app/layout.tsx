@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from 'react';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 
 import { ThemedWrapper } from './ThemedWrapper';
+import { ContentLayout } from './ContentLayout';
 
 export const metadata = {
   title: 'Next.js',
@@ -13,7 +14,9 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
     <html lang="ja">
       <body>
         <AppRouterCacheProvider>
-          <ThemedWrapper>{children}</ThemedWrapper>
+          <ThemedWrapper>
+            <ContentLayout>{children}</ContentLayout>
+          </ThemedWrapper>
         </AppRouterCacheProvider>
       </body>
     </html>
