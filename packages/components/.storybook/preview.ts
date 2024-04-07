@@ -21,6 +21,11 @@ const preview: Preview = {
       GlobalStyles: CssBaseline,
     }),
   ],
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
 };
 
 export default preview;

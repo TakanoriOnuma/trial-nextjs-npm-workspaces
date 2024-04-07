@@ -4,6 +4,7 @@ import { FC, PropsWithChildren } from 'react';
 import { Box, Drawer } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Header, HeaderWrapper } from '@pkg/components';
+import { AdminNavigationList } from './AdminNavigationList';
 
 const NAVIGATION_WIDTH = 280;
 
@@ -24,7 +25,7 @@ export const ContentLayout: FC<ContentLayoutProps> = ({ children }) => {
         }}
       >
         <HeaderWrapper />
-        <div>ナビゲーション</div>
+        <AdminNavigationList />
       </Drawer>
       <Box sx={{ flex: '1 1 0', display: 'flex', flexDirection: 'column' }}>
         <HeaderWrapper />

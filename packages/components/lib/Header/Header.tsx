@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { AppBar, AppBarProps, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export const HeaderWrapper = styled(Toolbar)();
+export const HeaderWrapper = styled(Toolbar)({});
 
 export type HeaderProps = {
   /** タイトル */
