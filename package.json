@@ -11,7 +11,9 @@
     "packages/*"
   ],
   "scripts": {
-    "preinstall": "npx only-allow npm"
+    "preinstall": "npx only-allow npm",
+    "w:admin": "npm run -w admin-app",
+    "w:components": "npm run -w @pkg/components"
   },
   "devDependencies": {
     "@types/node": "^20.12.5",
